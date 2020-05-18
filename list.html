@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link href="./list.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header and navbar specific for the mobile viewport -->
+
+    <div id="isMobile">
+        <header class="mobile-header-brand">
+            <h1><span class="bookIcon"><i class="fas fa-book-reader"></i></span> Book<span class="worm">worm</span></h1>
+            <p>a book lover's best friend</p>
+        </header>
+
+        <nav class="mobile-navbar">
+            <div class="nav-link-container">
+                <a class="nav-link" href="home.html">Home</a>
+            </div>
+            <div class="nav-link-container">
+                <a class="nav-link" href="search.html">Search</a>
+            </div>
+            <div class="nav-link-container">
+                <a class="current-page-link nav-link" href="list.html">My List</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Header and navbar specific to desktop viewport -->
+
+    <div class="desktopContainer" id="is-desktop">
+        <div class="brand">
+            <h1><span class="bookIcon"><i class="fas fa-book-reader"></i></span> Book<span class="worm">worm</span></h1>
+            <p>a book lover's best friend</p>
+        </div>
+        <nav class="desktop-navbar">
+            <div class="nav-link-container">
+                <a class="nav-link" href="home.html">Home</a>
+            </div>
+            <div class="nav-link-container">
+                <a class="nav-link" href="search.html">Search</a>
+            </div>
+            <div class="nav-link-container">
+                <a class="current-page-link nav-link" href="list.html">My List</a>
+            </div>
+        </nav>
+    </div>
+
+
+    <main>
+        <div class="list-container">
+
+            <!-- Headings -->
+            <div class="list-grid-container" id="list-headers">
+                <div class="list-grid-item">
+                    Details
+                </div>
+                <div class="list-grid-item">
+                    <div id="list-header-date-full">Target read date</div>
+                    <div id="list-header-date-TRD">TRD</div>
+                </div>
+                <div class="list-grid-item">
+                    Info
+                </div>
+                <div class="list-grid-item">
+                    Delete
+                </div>
+            </div>
+
+            <div class="list-grid-container listed-book" data-id="1o7D0m_osFEC">
+                <div class="list-grid-item book-details">
+                    <p class="book-title">Harry Potter and the Chamber of Secrets</p>
+                    <p class="book-author">J.K.Rowling</p>
+                </div>
+                <div class="list-grid-item target-read-date">
+                    <p class="static-date">01/07/2020</p>
+                </div>
+                <div class="list-grid-item">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="list-grid-item">
+                    <i class="fas fa-trash-alt"></i>
+                </div>
+            </div>
+
+            <div class="list-grid-container listed-book" data-id="zGswDQAAQBAJ">
+                <div class="list-grid-item book-details">
+                    <p class="book-title">Harry Potter and the Prisoner of Askaban</p>
+                    <p class="book-author">J.K.Rowling</p>
+                </div>
+                <div class="list-grid-item target-read-date">
+                    <p class="static-date">01/06/2020</p>
+                </div>
+                <div class="list-grid-item">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="list-grid-item">
+                    <i class="fas fa-trash-alt"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- 'Save', 'cancel changes' and 'clear all' buttons container -->
+        <div class="buttons-container">
+            <div class="clearButton">
+                <button id="clearBtn">Clear list</button>
+            </div>
+        </div>
+
+        <!-- Change Date modal -->
+        <div id="change-date-modal" class="display-none">
+
+            <!-- Modal content -->
+            <div id="date-modal-content" data-date="">
+                <div class="title-close-container">
+                    <span id="date-modal-title">placeholder title</span>
+                    <span id="date-modal-close">&times;</span>
+                </div>
+                <div id="new-date-container">
+                    <p id="select-date-guidance">
+                        Enter a new target read date in the format DD/MM/YYYY:
+                    </p>
+                </div>
+                <div id="date-entry-save-container">
+                    <textarea id="select-date">01/07/2020</textarea>
+                    <div id="save-button-container">
+                        <button id="saveBtn">Save</button>
+                    </div>
+                </div>
+                <p id="select-date-warning" class="display-none">The date you entered is not of the format DD/MM/YYYY
+                </p>
+                <p id="no-change-warning" class="display-none">The date you entered is the same as the date you
+                    previously set</p>
+                <p id="confirm-save" class="display-none">Your new target read date has been saved</p>
+            </div>
+
+        </div>
+
+        <!-- Clear List modal -->
+        <div id="clear-list-modal" class="display-none">
+
+            <!-- Modal content -->
+            <div id="clear-modal-content" data-id="">
+                <div class="title-close-container">
+                    <span id="clear-modal-title">Delete my read list</span>
+                    <span id="clear-modal-close">&times;</span>
+                </div>
+                <div id="clear-modal-guidance">
+                    <p>When you delete your read list, you cannot retrieve it</p>
+                    <p>Are you sure you want to delete your read list?</p>
+                    <p>Click 'Yes' to accept or 'No' to cancel</p>
+                </div>
+                <div class="modal-buttons-container">
+                    <div class="yes-button-container">
+                        <button class="yesBtn">Yes</button>
+                    </div>
+                    <div class="no-button-container">
+                        <button class="noBtn">No</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Delete book from list modal -->
+        <div id="delete-book-modal" class="display-none">
+
+            <!-- Modal content -->
+            <div id="delete-modal-content" data-id="">
+                <div class="title-close-container">
+                    <span id="delete-modal-title">Placeholder title</span>
+                    <span id="delete-modal-close">&times;</span>
+                </div>
+                <div id="delete-modal-guidance">
+                    <p>When you delete a book from your read list, you cannot retrieve it</p>
+                    <p>Are you sure you want to delete this book from your read list?</p>
+                    <p>Click 'Yes' to accept or 'No' to cancel</p>
+                </div>
+                <div class="modal-buttons-container">
+                    <div class="yes-button-container">
+                        <button class="yesDeleteBtn">Yes</button>
+                    </div>
+                    <div class="no-button-container">
+                        <button class="noBtn">No</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="infoModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="new-modal-content">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer id="sticky-footer" class="footer">
+        <small>Copyright &copy; 2020 - N.Witharana, H.Raoof, J.Dodgson, D.Phillips</small>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

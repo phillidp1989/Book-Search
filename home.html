@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link href="home.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header and navbar specific for the mobile viewport -->
+
+    <div id="isMobile">
+        <header class="mobile-header-brand">
+            <h1><span class="bookIcon"><i class="fas fa-book-reader"></i></span> Book<span class="worm">worm</span></h1>
+            <p>a book lover's best friend</p>
+        </header>
+
+        <nav class="mobile-navbar">
+            <div class="nav-link-container">
+                <a class="current-page-link nav-link" href="home.html">Home</a>
+            </div>
+            <div class="nav-link-container">
+                <a class="nav-link" href="search.html">Search</a>
+            </div>
+            <div class="nav-link-container">
+                <a class="nav-link" href="list.html">My List</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Header and navbar specific to desktop viewport -->
+
+    <div class="desktopContainer" id="is-desktop">
+        <div class="brand">
+            <h1><span class="bookIcon"><i class="fas fa-book-reader"></i></span> Book<span class="worm">worm</span></h1>
+            <p>a book lover's best friend</p>
+        </div>
+        <nav class="desktop-navbar">
+            <div class="nav-link-container">
+                <a class="current-page-link nav-link" href="home.html">Home</a>
+            </div>
+            <div class="nav-link-container">
+                <a class="nav-link" href="search.html">Search</a>
+            </div>
+            <div class="nav-link-container">
+                <a class="nav-link" href="list.html">My List</a>
+            </div>
+        </nav>
+    </div>
+
+
+    <main class="mainBody">
+
+        <div class="center">
+
+            <h2>Bookworm</h2>
+            <img class="book-image" src="images\book-image.png" alt="books">
+            <h3>a book lover's best friend</h3>
+
+            <ul>
+                <li>
+                    <p>Find information about books you're interested in</p>
+                </li>
+                <li>
+                    <p>Add books to your read list and set yourself a target read date</p>
+                </li>
+                <li>
+                    <p>Add or remove books from your read list and change your target read date</p>
+                </li>
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer id="sticky-footer" class="footer">
+        <small>Copyright &copy; 2020 - N.Witharana, H.Raoof, J.Dodgson, D.Phillips</small>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

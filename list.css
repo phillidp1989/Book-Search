@@ -1,0 +1,712 @@
+/* Full document styling */
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #eeeeee;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 500;
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+main {
+    margin: 10px;
+}
+
+/* Header styling */
+
+.header-display {
+    display: inline;
+    text-align: center;
+    background-color: #009999;
+    color:white;
+    font-family: 'Noto Serif', serif;
+}
+
+.navbar {
+    display: inline;
+    text-align: center;
+    color:black;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgb(97, 97, 97);
+    padding: 5px 0 5px 0;
+}
+
+.logo-text {
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo-icon {
+    height: 1rem;
+}
+
+.logo-container {
+    width: 100%;
+    text-align: center;
+    color: brown;
+    font-size: 24px;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid rgb(97, 97, 97);
+}
+
+.home-link-container, .search-link-container, .list-link-container {
+    text-align: center;
+}
+
+.home-link-container, .list-link-container {
+    width: 39%;
+}
+
+.search-link-container {
+    text-align: center;
+    width: 20%;
+}
+
+.worm {
+    color: #d9dcd6;
+}
+
+.mobile-navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    background-color: #49274A;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #94618E;
+    color: #ffffff;
+    text-align: center;
+    height: 100px;
+}
+
+header h1 {
+    line-height: 60px;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: 500;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;  
+    transition: transform .25s;  
+}
+
+.nav-link:hover{
+    transform: scale(1.5);
+    color: #94618E;
+}
+
+.nav-link-container {
+    width: 33.33%;
+    float: left;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.current-page-link {
+    font-weight: bold;
+}
+
+.desktop-navbar {
+    width: 40%;
+}
+
+.desktopContainer {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #94618E;    
+    color: #ffffff;
+    text-align: center;
+    height: 90px;
+    padding: 5px 50px;
+    display: none;
+    justify-content: space-between;
+}
+
+.desktopContainer h1 {
+    line-height: 60px;
+    margin-bottom: 0;
+}
+
+header p {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+#addDate{
+    width: -webkit-fill-available;
+    text-align: center;
+    border: 0px;
+}
+
+/* Empty list styling */
+
+.emptyList {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    padding-top: 20px;
+    font-weight: 500;   
+}
+
+
+/* List styling */
+
+.list-grid-container {
+    display: grid;
+    grid-template-columns: 45% 25% 15% 15%;
+    align-items: center;
+}
+
+.list-grid-item {
+    padding: 5px;
+    font-size: 11px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.list-grid-item .static-date, .list-grid-item i {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); */
+}
+
+#list-headers {
+    font-weight: bold;
+}
+
+#list-header-date-TRD {
+    display: none;
+}
+
+.listed-book {
+    border: 1px solid rgb(97, 97, 97);
+    border-radius: 5px;
+    margin-top: 2px;
+    background: white
+}
+
+.book-author {
+    font-style: italic;
+}
+
+.static-date {
+    padding: 3px;
+    border: 1px solid black ;
+    border-radius: 5px;
+    background-color: rgb(148, 97, 142, 0.3);
+    transition: transform .25s;
+    width: fit-content;
+    margin: auto;
+}
+
+.static-date:hover, .static-date:focus {
+    background-color: rgb(148, 97, 142, 0.7);
+    font-weight: bold;
+    cursor: pointer;
+    transform: scale(1.15);
+}
+
+.fa-info-circle, .fa-trash-alt {
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform .25s;
+}
+
+.fa-info-circle:hover, .fa-trash-alt:hover {
+    transform: scale(1.25);
+}
+
+.buttons-container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.clearButton {
+    display: inline;
+}
+
+#clearBtn {
+    color: #fff;
+    background: red;
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    font-size: 12px;
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+}
+
+#clearBtn:hover {
+    background-color: rgb(185, 0, 0);
+}
+
+
+/* Modal styling */
+#change-date-modal, #clear-list-modal, #delete-book-modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+#date-modal-content, #clear-modal-content, #delete-modal-content {
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%; 
+    font-family: 'Lato', sans-serif;
+    max-width: 500px;
+}
+
+#clear-modal-content, #delete-modal-content {
+    padding-bottom: 65px;
+}
+
+#date-modal-close, #clear-modal-close, #delete-modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    height: 100%;
+    text-align: right;
+}
+
+#date-modal-close:hover,
+#date-modal-close:focus,
+#clear-modal-close:hover,
+#clear-modal-close:focus,
+#delete-modal-close:hover,
+#delete-modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.title-close-container {
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+
+#date-modal-title, #clear-modal-title, #delete-modal-title {
+    font-weight: bold;
+    width: 100%;
+    float: right;
+}
+
+#new-date-container {
+    margin-top: 10px;
+}
+
+#clear-modal-guidance p, #delete-modal-guidance p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#select-date-guidance, #select-date-warning, #no-change-warning, #confirm-save {
+    font-size: 12px;
+}
+
+#select-date-warning, #no-change-warning, #confirm-save {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#select-date-warning {
+    color: red;
+}
+
+#no-change-warning {
+    color: #e98527 ;
+}
+
+#confirm-save {
+    color: green ;
+}
+
+#date-entry-save-container {
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+}
+
+#select-date {
+    width: 80px;
+    height: 20px;
+    float: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.modal-buttons-container, .no-button-container, .yes-button-container {
+    float: left;
+    margin: 7.5px 0 0 15px;
+}
+
+#save-button-container {
+    float: left;
+    margin-left: 15px;
+}
+
+#saveBtn, .yesBtn, .noBtn, .yesDeleteBtn {
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    padding: 7.5px 10px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    font-size: 12px;
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+}
+
+#saveBtn, .yesBtn {
+    background-color: green;
+}
+
+#saveBtn {
+    width: 65px;
+}
+
+#saveBtn:hover, .yesBtn:hover {
+    background-color: rgb(1, 85, 1);
+}
+
+.noBtn {
+    background-color: grey;
+}
+
+.noBtn:hover {
+    background-color: rgb(83, 83, 83);
+}
+
+.yesDeleteBtn {
+    background-color: red;
+}
+
+.yesDeleteBtn:hover {
+    background-color: rgb(185, 0, 0);
+}
+
+
+/* Styling More Info modal */
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);   
+}
+  
+/* Modal Content/Box */
+.modal-content {
+background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+margin: 15% auto;
+padding: 20px;
+border: 1px solid #888;
+border-radius: 10px;
+width: 80%; 
+font-family: 'Lato', sans-serif;
+
+}
+
+/* The Close Button */
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+/* Modal content */
+
+.new-modal-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.info-container {
+    
+width: 100%;
+border-bottom: 2px solid lightgrey;
+padding-bottom: 20px;
+padding-top: 20px;
+
+}
+
+.title-author-container {
+    text-align: center;
+}
+
+.book-author {
+    font-style: italic;
+}
+
+.book-cover {
+    width: 80%;
+    height: auto;
+}
+
+.add-container {
+    text-align: center;
+}
+
+.add-container h3 {
+    margin-bottom: 0;
+}
+
+.add-container .fas {
+    background-color: transparent;
+    box-sizing: unset;
+    margin: 0em;
+    margin-bottom: 10px;
+    padding: 0;
+    border-width: 0;
+    border-style: unset;
+    border-color: unset;
+    border-image: unset;
+    cursor: pointer;
+}
+
+/* Star ratings */
+
+.stars-outer {
+    display: inline-block;
+    position: relative;
+}
+
+.stars-outer::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #ccc;
+}
+
+.stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+
+.stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #f8ce0b;
+}
+
+
+/* Footer styling */
+footer {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    border-top: 5px solid #49274A;
+    position: fixed;
+    bottom: 0;
+    background-color: dimgray;
+    color: #ffffff;
+    width: 100%;
+    min-height: 30px;
+}
+
+footer small {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+/* Universal styling */
+
+.display-none {
+    display: none;
+}
+
+
+/* Responsiveness */
+
+@media (min-width: 480px) and (max-width: 570px) {
+
+    .list-grid-item {
+        font-size: 13px;
+    }
+
+}
+
+@media (min-width: 0px) and (max-width: 379px) {
+
+    #list-header-date-TRD {
+        display: block;
+    }
+
+    #list-header-date-full {
+        display: none;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 390px) {
+
+    footer {
+        font-size: 13px;
+    }
+
+}
+
+@media (min-width: 0px) and (max-width: 299px) {
+
+    footer {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    
+    #is-desktop {
+        display: flex;
+    }
+
+    #isMobile {
+        display: none;
+    }
+
+    .nav-link {
+        position: absolute;
+        left: 30%;
+        top: 40%;
+        font-size: 18px;
+    }
+    
+    .nav-link:hover{
+        transform: scale(1.5);
+        color: #49274A;
+    }
+
+    .listed-book {
+        margin-top: 4px;
+    }
+
+    .list-grid-item {
+        font-size: 16px;
+    }
+
+    .fa-info-circle, .fa-trash-alt {
+        font-size: 28px;
+    }
+
+    .bookImage {
+        display: block;
+    }
+
+    .mainBody {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .searchElements {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #clearBtn {
+        font-size: 16px;
+    }
+
+    .fa-book-reader {
+        font-size: 40px;
+    }
+
+    .modal-content {
+        min-height: 450px;
+    }
+    
+    .new-modal-content {
+        display: block;
+    }
+
+    #date-modal-title, #clear-modal-title, #delete-modal-title {
+        font-size: 20px;
+    }
+
+    #delete-modal-content, #clear-modal-content {
+        padding-bottom: 80px;
+    }
+
+    #delete-modal-guidance p, #select-date-guidance, #select-date-warning, #no-change-warning, #confirm-save, #clear-modal-guidance p, #saveBtn, .yesBtn, .noBtn, .yesDeleteBtn {
+        font-size: 18px;
+    }
+
+    #select-date {
+        width: 105px;
+        height: 25px;
+        font-size: 18px;
+        margin: 2px 10px 0 0;
+    }
+
+    .book-cover {
+        float: left;
+        width: 40%;
+        height: auto; 
+        max-width: 300px;
+        max-height: 600px;       
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    .emptyList {
+        font-weight: 600;
+        font-size: 40px;   
+    }
+
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <link rel="stylesheet" href="search.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header and navbar specific for the mobile viewport -->
+
+    <div id="isMobile">
+        <header class="mobile-header-brand">
+            <h1><span class="bookIcon"><i class="fas fa-book-reader"></i></span> Book<span class="worm">worm</span></h1>
+            <p>a book lover's best friend</p>
+        </header>
+
+        <nav class="mobile-navbar">
+            <div class="nav-link-container">
+                <a class="nav-link" href="home.html">Home</a>
+            </div>
+            <div class="nav-link-container">
+                <a class="current-page-link nav-link" href="search.html">Search</a>
+            </div>
+            <div class="nav-link-container">
+                <a class="nav-link" href="list.html">My List</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Header and navbar specific to desktop viewport -->
+
+    <div class="desktopContainer" id="is-desktop">
+        <div class="brand">
+            <h1><span class="bookIcon"><i class="fas fa-book-reader"></i></span> Book<span class="worm">worm</span></h1>
+            <p>a book lover's best friend</p>
+        </div>
+        <nav class="desktop-navbar">
+            <div class="nav-link-container">
+                <a class="nav-link" href="home.html">Home</a>
+            </div>
+            <div class="nav-link-container">
+                <a class="current-page-link nav-link" href="search.html">Search</a>
+            </div>
+            <div class="nav-link-container">
+                <a class="nav-link" href="list.html">My List</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main body -->
+
+    <main class="mainBody">
+
+        <div class="searchElements">
+
+            <form class="form-style">
+                <h2>Find a Book</h2>
+                <ul>
+                    <li>
+                        <label for="title">Title</label>
+                        <input id="titleSearchField" type="text" name="title" maxlength="100">
+                        <span>Search for the full or partial title of your chosen book</span>
+                    </li>
+                    <li>
+                        <label for="author">Author</label>
+                        <input id="authorSearchField" type="text" name="author" maxlength="100">
+                        <span>Search for the author of your chosen book</span>
+                    </li>
+                    <li>
+                        <label for="genre">Genre</label>
+                        <input id="genreSearchField" type="text" name="genre" maxlength="100">
+                        <span>Search for the subject category of your chosen book</span>
+                    </li>
+                </ul>
+            </form>
+
+            <div class="order">
+                <p id="successsMsgDiv" class="success"></p>
+                <p>Order search by:</p>
+                <div class="radio-buttons">
+                    <input type="radio" id="relevance" name="orderGroup" value="relevance" checked="true">
+                    <label for="relevance">Relevance</label><br>
+                    <input type="radio" id="newest" name="orderGroup" value="newest">
+                    <label for="newest">Newest to Oldest</label><br>
+                </div>
+            </div>
+
+            <div class="searchButton">
+                <button id="searchBtn">Search</button>
+            </div>
+            <div class="loading display-none"></div>
+        </div>
+
+        <div id="search-results-container">
+
+            <!-- Search results headers -->
+            <div id="result-headers" class="grid-container display-none">
+                <div id="imageHeader" class="columnHeaders grid-item">Cover</div>
+                <div id="detailsHeader" class="columnHeaders grid-item">Details</div>
+                <div id="infoHeader" class="columnHeaders grid-item">Info</div>
+                <div id="listHeader" class="columnHeaders grid-item">Add</div>
+            </div>
+        </div>
+
+        <div id="infoModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="new-modal-content">
+
+                </div>
+
+            </div>
+
+        </div>
+        <div id="change-date" class="display-none">
+
+            <!-- Modal content -->
+            <div id="date-modal-content" data-date="">
+                <div id="title-close-container">
+                    <span id="date-modal-title">You are about to add this book in to your list...</span>
+                    <span id="date-modal-close"><i class="far fa-window-close"></i></span>
+                    <span id="date-modal-title2"></span>
+                </div>
+                <div id="new-date-container">
+                    <p id="select-date-guidance">
+                        Enter a target read date in the format DD/MM/YYYY:
+                    </p>
+                </div>
+                <div id="date-entry-save-container">
+                    <input type="text" class="selectDate" id="select-date" placeholder="DD/MM/YYYY">
+                    <div id="save-button-container" class="addToListTimeBtn">
+                        <button id="addTolistBtn">Add to list</button>
+                    </div>
+                </div>
+                <p id="msgDiv" class="error"></p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer id="sticky-footer" class="footer">
+        <small>Copyright &copy; 2020 - N.Witharana, H.Raoof, J.Dodgson, D.Phillips</small>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
